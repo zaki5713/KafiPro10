@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<StartupObject>KafiPro10.Solution.My.MyApplication</StartupObject>
+		<UseWindowsForms>true</UseWindowsForms>
+		<MyType>WindowsForms</MyType>
+		<OptionStrict>On</OptionStrict>
+		<RootNamespace>KafiPro10.Solution</RootNamespace>
+		<ImportedNamespaces>KafiPro.Infrastructure.Persistence=False,KafiPro10.Solution.KafiPro.Production.Infrastructure.Repositories=False,KafiPro10.Solution.KafiPro.Production.Infrastructure.Repositories.Interfaces=False,System.Data=False,System.Drawing=False,System.Windows.Forms=False,System.Windows.Forms.Automation=False,System.Windows.Forms.ComponentModel.Com2Interop=False,System.Windows.Forms.DataVisualization=False,System.Windows.Forms.Design=False,System.Windows.Forms.Design.Behavior=False,System.Windows.Forms.Layout=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,KafiPro10.Solution=True</ImportedNamespaces>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Import Include="KafiPro.Infrastructure.Persistence" />
+		<Import Include="KafiPro10.Solution.KafiPro.Production.Infrastructure.Repositories" />
+		<Import Include="KafiPro10.Solution.KafiPro.Production.Infrastructure.Repositories.Interfaces" />
+		<Import Include="System.Data" />
+		<Import Include="System.Drawing" />
+		<Import Include="System.Windows.Forms" />
+		<Import Include="System.Windows.Forms.Automation" />
+		<Import Include="System.Windows.Forms.ComponentModel.Com2Interop" />
+		<Import Include="System.Windows.Forms.DataVisualization" />
+		<Import Include="System.Windows.Forms.Design" />
+		<Import Include="System.Windows.Forms.Design.Behavior" />
+		<Import Include="System.Windows.Forms.Layout" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="My Project\Application.Designer.vb">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Application.myapp</DependentUpon>
+		</Compile>
+		<Compile Update="My Project\Settings.Designer.vb">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="My Project\Application.myapp">
+			<Generator>MyApplicationCodeGenerator</Generator>
+			<LastGenOutput>Application.Designer.vb</LastGenOutput>
+		</None>
+		<None Update="My Project\Settings.settings">
+			<CustomToolNamespace>My</CustomToolNamespace>
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.vb</LastGenOutput>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+		<PackageReference Include="WinForms.DataVisualization" Version="1.10.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="UserControls\Quality\Application\DTOs\" />
+	  <Folder Include="UserControls\Quality\Application\Interfaces\" />
+	  <Folder Include="UserControls\Quality\Application\Services\" />
+	  <Folder Include="UserControls\Quality\Designer\" />
+	  <Folder Include="UserControls\Quality\Infrastructure\" />
+	  <Folder Include="UserControls\Sales\Application\Interfaces\" />
+	  <Folder Include="UserControls\Sales\Application\Services\" />
+	  <Folder Include="UserControls\Sales\Designer\" />
+	  <Folder Include="UserControls\Settings\Application\DTOs\" />
+	  <Folder Include="UserControls\Settings\Application\Interfaces\" />
+	  <Folder Include="UserControls\Settings\Application\Services\" />
+	  <Folder Include="UserControls\Settings\Designer\" />
+	  <Folder Include="UserControls\Settings\Infrastructure\" />
+	  <Folder Include="UserControls\Transport\Application\DTOs\" />
+	  <Folder Include="UserControls\Transport\Application\Interfaces\" />
+	  <Folder Include="UserControls\Transport\Application\Services\" />
+	  <Folder Include="UserControls\Transport\Designer\" />
+	  <Folder Include="UserControls\Transport\Infrastructure\" />
+	  <Folder Include="UserControls\Warehouses\Application\Interfaces\" />
+	  <Folder Include="UserControls\Warehouses\Designer\" />
+	</ItemGroup>
+
+</Project>
